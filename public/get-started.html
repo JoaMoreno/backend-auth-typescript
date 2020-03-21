@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            margin: 10px 4vw;
+            text-decoration: none;
+            color: rgb(37, 37, 37);
+        }
+        .hr{
+            padding: 15px 0 ;
+        }
+        .group-peticion {
+            width: 65vw;
+            display: flex;
+
+            margin: 0;
+        }
+
+        .group-peticion h3 {
+            color: rgb(73, 196, 233);
+        }
+
+        .peticion {
+            display: block;
+            max-width: 60px;
+            min-width: 60px;
+        }
+
+        .description p {
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        .description h4 {
+            margin: 2px;
+            margin-bottom: 20px;
+        }
+
+        .description h6 {
+            font-size: 12px;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        .json {
+            font-size: 15px;
+            margin: 0;
+            padding: 10px;
+            background: rgba(73, 196, 233, 0.2);
+        }
+
+        .json>p {
+            margin: 10px;
+            margin-left: 20px;
+        }
+
+        .danger {
+            border-radius: 5px;
+            padding: 5px 10px;
+            color: rgb(202, 36, 36);
+            background: rgb(255, 136, 136, .5);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="hr">Routes</h1>
+    <p>Todas las rutas empiezan por: <a href="https://apirest.glitch.me/api">https://apirest.glitch.me/api</a></p>
+    <h3 class="hr">Metodos</h3>
+    <div class="group-peticion">
+        <h3 class="peticion">GET</h3>
+        <div class="description">
+            <h4>/products</h4>
+            <h6>https://apirest.glitch.me/api/products</h6>
+            <p>Retorna un objeto JSON con todos los productos en la DB</p>
+        </div>
+    </div>
+
+    <div class="group-peticion">
+        <h3 class="peticion">POST</h3>
+        <div class="description">
+            <h4>/products</h4>
+            <h6>https://apirest.glitch.me/api/products</h6>
+            <p>Guarda un nuevo producto, requiere que se le envie un JSON</p>
+            <div class="json">
+                {
+                <p>"name": "Product Name" </p>
+                <p>"description": "Product Description" </p>
+                <p>"precio": "Product Price"</p>
+                <p>"imgURL": "Product Image"</p>}
+            </div>
+        </div>
+    </div>
+    <div class="group-peticion">
+        <h3 class="peticion">POST</h3>
+        <div class="description">
+            <h4>/products/id</h4>
+            <h6>https://apirest.glitch.me/api/products/ + id</h6>
+            <p>Retorna un unico producto, se require el id del producto en la URL</p>
+        </div>
+    </div>
+
+    <div class="group-peticion">
+        <h3 class="peticion">PUT</h3>
+        <div class="description">
+            <h4>/products/id</h4>
+            <h6>https://apirest.glitch.me/api/products/ + id</h6>
+            <p>Edita un producto, se require el id del producto en la URL y el objeto JSON con los datos</p>
+        </div>
+    </div>
+
+    <div class="group-peticion">
+        <h3 class="peticion">DELETE</h3>
+        <div class="description">
+            <h4>/products/id</h4>
+            <h6>https://apirest.glitch.me/api/products/ + id</h6>
+            <p>Elimina un producto, se require el id del producto en la URL</p>
+            <p class="danger">Metodo POST para eliminar DEPRECADO</p>
+        </div>
+    </div>
+</body>
+
+</html>

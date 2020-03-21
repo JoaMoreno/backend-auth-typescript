@@ -23,10 +23,8 @@ app.use(passport.initialize());
 passport.use(passportMiddleware);
 
 // routes
-app.get("/", (req, res) => {
-    res.send("Hola");
-});
-app.use(authRoutes);
-app.use(privateRoutes);
+app.use(express.static('public'));
+app.use("/api",authRoutes);
+app.use("/api",privateRoutes);
 
 export default app;
